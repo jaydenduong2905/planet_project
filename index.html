@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Space Tourism – Pick your destination</title>
+  <link rel="icon" type="image/png" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400&family=Barlow+Condensed:wght@400;600&family=Bellefair&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="header__logo" href="./index.html" aria-label="Space tourism home">
+      <img src="./assets/shared/logo.svg" alt="">
+    </a>
+    <span class="header__line" aria-hidden="true"></span>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="./index.html" aria-current="page"><b>01</b>Destination</a></li>
+        <li><a href="#"><b>02</b>Install to Guidebook</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <nav class="planet-nav" aria-label="Planets">
+    <a href="./sun.html">Sun</a>
+    <a href="./mercury.html">Mercury</a>
+    <a href="./venus.html">Venus</a>
+    <a href="./earth.html">Earth</a>
+    <a href="./moon.html">Moon</a>
+    <a href="./mars.html">Mars</a>
+    <a href="./jupiter.html">Jupiter</a>
+    <a href="./saturn.html">Saturn</a>
+    <a href="./uranus.html">Uranus</a>
+    <a href="./neptune.html">Neptune</a>
+  </nav>
+
+  <main>
+    <h2 class="title"><span>01</span>Pick your destination</h2>
+
+    <div class="planet">
+      <div class="spin" id="planet-spin" role="img" aria-label="The Sun"></div>
+      <p class="drag-hint" aria-hidden="true">Drag to spin</p>
+    </div>
+
+    <section class="info">
+      <div class="tabs" role="tablist" aria-label="Destinations" id="tablist"></div>
+
+      <div id="panel" role="tabpanel">
+        <h1 id="dest-name"></h1>
+        <p id="dest-description"></p>
+        <dl class="stats">
+          <div>
+            <dt>Avg. distance</dt>
+            <dd id="dest-distance"></dd>
+          </div>
+          <div>
+            <dt>Est. travel time</dt>
+            <dd id="dest-travel"></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <script src="./backend.js"></script>
+</body>
+</html>
